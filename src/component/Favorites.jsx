@@ -50,7 +50,7 @@ export default function Favorites(props) {
         <div className='div_flex'>
         {props.arr.map(item =>{
             icon = item.icon
-             switch (icon) {
+              switch (icon) {
                 case 1:
                     icon = N1;
                     break;
@@ -177,9 +177,9 @@ export default function Favorites(props) {
             }else{
                 return <p className='p_day'>{item.disName}<br/>{item.temp}C<br/><img className='img' src={icon}/></p>
             }
-           })}
+          })}
         </div>
-
+          <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
         </div>
     )
 }

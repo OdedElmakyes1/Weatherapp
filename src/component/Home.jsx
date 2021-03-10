@@ -61,7 +61,7 @@ export default function Home(props) {
     const [favBut, setFavBut] = useState('Add To')
 
     let defaultTelAviv =() =>{ 
-     fetch(`https://dataservice.accuweather.com/currentconditions/v1/215854?apikey=OamihYj5o5ZcM4Apfg3ewaGUCTGWqUxG`, {
+    fetch(`https://dataservice.accuweather.com/currentconditions/v1/215854?apikey=OamihYj5o5ZcM4Apfg3ewaGUCTGWqUxG`, {
         })
     .then((response) => {
       if (response.ok) {
@@ -77,7 +77,7 @@ export default function Home(props) {
         setText(jsonObject[0].WeatherText)
     return jsonObject;
     });
-     fetch(`https://dataservice.accuweather.com/forecasts/v1/daily/5day/215854?apikey=OamihYj5o5ZcM4Apfg3ewaGUCTGWqUxG&metric=true`, {
+    fetch(`https://dataservice.accuweather.com/forecasts/v1/daily/5day/215854?apikey=OamihYj5o5ZcM4Apfg3ewaGUCTGWqUxG&metric=true`, {
         })
     .then((response) => {
     return response.json();
@@ -104,7 +104,7 @@ export default function Home(props) {
           dayTemp: jsonObject.DailyForecasts[4].Temperature.Maximum.Value,
           icon: jsonObject.DailyForecasts[4].Day.Icon,
         },])
-         datetoday = [jsonObject.DailyForecasts[0].Date.slice(0, 10),jsonObject.DailyForecasts[1].Date.slice(0, 10),jsonObject.DailyForecasts[2].Date.slice(0, 10),jsonObject.DailyForecasts[3].Date.slice(0, 10),jsonObject.DailyForecasts[4].Date.slice(0, 10)]
+        datetoday = [jsonObject.DailyForecasts[0].Date.slice(0, 10),jsonObject.DailyForecasts[1].Date.slice(0, 10),jsonObject.DailyForecasts[2].Date.slice(0, 10),jsonObject.DailyForecasts[3].Date.slice(0, 10),jsonObject.DailyForecasts[4].Date.slice(0, 10)]
         for(let i = 0; i< datetoday.length;i++){
             datetoday[i].toString()
             datetoday[i] = new Date(datetoday[i])
@@ -295,8 +295,8 @@ export default function Home(props) {
         <div>
             <Header telAvivCallFunc = {telAvivFunc}/>
             <Input onChange={checkFav} type="text" placeholder='   Write the name of a city'/><br/>
-            <p>TelAviv<br/>{temp}C<br/><img src={icon}/></p>
-            <Button onClick={addToList}>{favBut} Favorites</Button>
+            <p>Tel Aviv<br/>{temp}C<br/><img src={icon}/></p>
+            <Button style={{border:'Solid 2px black'}} onClick={addToList}>{favBut} Favorites</Button>
             <h3>{text}</h3>
             <div className='div_flex'>
               {fiveDaysInfo.map((item, index) => {
@@ -431,6 +431,7 @@ export default function Home(props) {
                                     )
               })}
             </div>
+            <br /><br /><br /><br />
         </div>
     )
 }
