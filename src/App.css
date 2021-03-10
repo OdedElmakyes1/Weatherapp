@@ -1,0 +1,58 @@
+h1{
+  font-family: 'Roboto Mono', monospace;
+  margin-top: 10px;
+  color: white;
+  text-shadow: 0px -5px 7px rgba(76, 76, 76, 1);}
+.App {
+  background-image: url('./media/49284081.jpg');
+  background-size:100% 100%;
+  text-align: center;
+  width: 600px;
+  margin: 0 auto;
+  border-style: hidden;
+  box-shadow: 0px 0px 12px rgba(78, 70, 64, 0.164);
+  text-shadow: 0px 0px 5px rgba(78, 70, 64, 0.164);
+  border-radius: 15px;
+  margin-top: 20px;
+
+}
+
+.div_flex{
+  display: flex;
+  justify-content: space-around;
+  padding-left: 100px;
+  padding-right: 100px;
+  text-align: center;
+}
+.p_day{
+  color: #d38450;
+  box-shadow: 0px 0px 12px rgba(78, 70, 64, 0.164);
+  text-shadow: 0px 0px 5px rgba(78, 70, 64, 0.164);
+  border-radius: 15px;
+  padding: 5px;
+  margin: 5px;
+  margin-bottom: 15px;
+}
+h3{
+  color: #d38450;
+  text-shadow: 0px 0px 5px rgba(78, 70, 64, 0.164);
+}
+@media only screen and (max-width: 600px){
+  body{
+    overflow-x: hidden;
+  }
+  .App{
+    overflow-x: hidden;
+    width: 360px;
+    height: 550px;
+  }
+  .p_day{
+    width: 58px;
+    font-size: 21px;
+    margin: 0 auto;
+  }
+  .img{
+    position: relative;
+    right: 9px;
+  }
+}
